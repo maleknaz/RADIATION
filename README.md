@@ -11,8 +11,13 @@ The Paper should be cited as
 
 The paper is available here: https://arxiv.org/abs/2305.19384
 
-This repository is ordered based on the steps in the process of RADIATION.  
 
 Our dataset is hosted on GitHub to ensure maintainability and ease of updates while adhering to the legal terms applicable to data hosted on mobile app marketplaces. The data was collected exclusively for this study, with no commercial or proprietary use intended, and has been managed in accordance with the relevant terms and conditions. To request access to the dataset, please contact us directly. Each request will be evaluated individually to ensure full compliance with all legal requirements. 
 
-The code used for this analysis can be found also on Zenodo:
+
+This repository is ordered based on the steps in the process of RADIATION and S1 to S7 refers to the steps of RADIATION.  
+
+S3 involves the results of the tool Backstage: Avdiienko, V., Kuznetsov, K., Rommelfanger, I., Rau, A., Gorla, A., Zeller, A.: Detecting behavior anomalies in graphical user interfaces. In: Proceedings of the 39th International Conference on Software Engineering Companion, pp. 201–203 (2017). 
+
+
+

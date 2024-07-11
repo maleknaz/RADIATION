@@ -1,0 +1,39 @@
+import logging
+from gensim import corpora, models, similarities
+
+path = "C:/Users/SEDS/Documents/USRA Research - Paul/HH Data/"
+
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+# Load the dictionary and corpus
+#dictionary = corpora.Dictionary.load(path + 'fdict4.dict')
+dictionary = corpora.Dictionary.load('fdict4.dict')
+#corpus = corpora.MmCorpus(path + 'fdict4.dict.mm')
+corpus = corpora.MmCorpus('fdict4.dict.mm')
+
+print(corpus)
+
+# Change from LDA to HDP model
+model_hdp = models.HdpModel(corpus, id2word=dictionary)
+model_hdp.save("hdpgen2.model")
+print(model_hdp.print_topics())
+
+lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
+
+#doc = "availa ad support permiss install user access help notif connect"
+doc = "human computer interaction"
+vec_bow = dictionary.doc2bow(doc.lower().split())
+vec_lsi = lsi[vec_bow] # convert the query to LSI space
+print(vec_lsi)
+
+index = similarities.MatrixSimilarity(lsi[corpus])
+
+index.save('deerwester.index')
+index = similarities.MatrixSimilarity.load('deerwester.index')
+
+sims = index[vec_lsi] # perform a similarity query against the corpus
+print(list(enumerate(sims))) # print (document_number, document_similarity) 2-tuples
+
+sims = sorted(enumerate(sims), key=lambda item: -item[1])
+print("\nSIMS IS BELOW\n")
+print(sims) # print sorted (document number, similarity score) 2-tuples
