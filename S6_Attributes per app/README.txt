@@ -1,0 +1,1 @@
+This step was a literature search extracting the attributes from state of the art
