@@ -17,6 +17,9 @@ Our dataset is hosted on GitHub to ensure maintainability and ease of updates wh
 
 This repository is ordered based on the steps in the process of RADIATION and S1 to S7 refers to the steps of RADIATION.  
 
+![image](https://github.com/maleknaz/RADIATION/assets/9893439/e93c5e98-72a1-42cf-8810-a1bacc4491d3)
+
+
 S3 involves the results of the tool Backstage: Avdiienko, V., Kuznetsov, K., Rommelfanger, I., Rau, A., Gorla, A., Zeller, A.: Detecting behavior anomalies in graphical user interfaces. In: Proceedings of the 39th International Conference on Software Engineering Companion, pp. 201–203 (2017). 
 
 
